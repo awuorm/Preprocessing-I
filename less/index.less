@@ -56,4 +56,80 @@ table {
 html, body {
     height: 100%;
 }
+/************My code begins here*******************/
+.my-box-model-defaults()	{
+	padding: 1em;
+	border:0.1em solid red;
+}
+
+.body-wrapper	{
+	margin:0 auto;
+	.my-box-model-defaults();
+}
+
+.navigation-wrapper	{
+	.my-box-model-defaults();
+	display: flex;
+	justify-content: flex-end;
+}
+
+	 nav a {
+			justify-content: space-between;
+			.my-box-model-defaults();
+			margin: 1em;
+			
+		}
+
+.header-wrapper{
+	.my-box-model-defaults();
+	display:flex;
+	// flex-direction: column;
+	justify-content: space-between;
+	background-color:antiquewhite;
+}
+	figure {
+		width:45%;
+
+			img{
+				border-radius: 1em;
+			}
+	}
+	.header-name {
+		width:45%;
+		display:flex;
+		align-items: flex-end;
+		
+		
+		p{
+			font-size: 1.5em;
+		}
+	}
+.profile-wrapper{
+	 .my-box-model-defaults();
+		h1{
+			font-size: 1em;
+			margin: 0.2em;
+			padding: 0.2em;
+		}
+		p{
+			line-height: 1.2em;
+		}
+	}
+
+.main-wrapper {
+	.my-box-model-defaults();
+	display: flex;
+	justify-content: space-between;
+	background-color:red;
+		.main-wrapper-left{
+			line-height: 1.2em;
+		}
+		.main-wrapper-right{
+			line-height: 1.2em;
+		}
+}		
+
+
+
+
 

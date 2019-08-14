@@ -7,8 +7,8 @@
 
   <title>Mildred's Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
-
+  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <link rel="stylesheet/less" type="text/css" href="less/index.less" />
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -16,7 +16,7 @@
 
 <body>
   <div class="body-wrapper">
-    <div class="navigation wrapper">
+    <div class="navigation-wrapper">
       <nav>
         <a>Home</a>
         <a>About</a>
@@ -29,15 +29,38 @@
       <figure>
         <img src="./mildred_profile.jpg">
       </figure>
-      <p>Mildred Awuor Otieno</p>
-      <p>Full Stack Web Developer</p>
+      <div class="header-name">
+        <p >Mildred Awuor Otieno<br>Full Stack Web Developer</p>
+      </div>
     </div>
-    <section>
+    <section class="profile-wrapper">
+      <h1>Personal profile</h2>
       <p>I am an open-minded individual with a clear, logical and practical approach to problem solving and a drive to see things through to completion.<br>
-         I have a great eye for detail. I am eager to learn, I enjoy overcoming challenges, and I have a genuine interest in web development.<br>
+         I have a great eye for detail. I am eager to learn, and I have a genuine interest in web development.<br>
           I have strong technical skills as well as excellent interpersonal skills. I am eager to be challenged in my everyday activities.<br></p>
     </section>
+    <main>
+      <section class="main-wrapper">
+        <h2>Experience</h2>
+        <div class="main-wrapper-right">
+          <h3>June,2019 - August,2019</h3>
+            <p>Enterprise Solutions Architect</p>
+              <p>Research  and design network solutions for clients at Adrian Kenya<br>
+                Maintain vendor relationship, develop technical proposals for Adrian's<br>
+                internal core business in the telecommunications industry.<br>
+              </p>
+            </div>
+            <div class="main-wrapper-left">
+              <h3>November, 2017 - May, 2019</h3>
+              <p>Fixed Data Engineer</p>
+                <p>deployment, installation and integration of fixed internet  and MPLS<br>
+                   for Safaricom  enterprise clients using various last mile telecommunication<br>
+                    technologies such as fibre, WIMAX, LTE and microwave.<br> </p>     
+            </div>
+        </section>
+    </main>
   </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 </body>
 
 </html>
