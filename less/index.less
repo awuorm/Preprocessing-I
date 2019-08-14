@@ -175,13 +175,36 @@ html, body {
 	}
 	}
 
-
-}
 footer{
 	padding:2em;
 	margin:0.5em;
 	text-align: center;
+	
 }
+.contact-wrapper{
+	.my-box-model-defaults();
+	
+	.inner-wrapper{
+		.my-box-model-defaults();
+		text-align: center;
+		h3{
+			font-size: 2em;
+			&:hover{
+				background-image: url(./nav-bkg.jpg);
+			}
+		}
+	}
+		.field-half input {
+			margin: 1em;
+			padding:1em;
+			width:50%;
+		}
+			.field-msg textarea {
+				margin: 1em;
+				padding:1.5em;
+				width:50%;
+			}
+	}
 
 
 
