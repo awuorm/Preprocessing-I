@@ -54,12 +54,25 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: @rootBackGroundColor;
+	
+	
 }
 /************My code begins here*******************/
+//variables background-color
+@rootBackGroundColor: white;
+@headerBackGroundColor: orangered;
+
+//mixins
 .my-box-model-defaults()	{
 	padding: 1em;
-	border:0.1em solid red;
+	border:0.1em;
+	margin:0.2em;
+}
+.my-flex-defaults(){
+	display: flex;
+	justify-content: space-between;
 }
 
 .body-wrapper	{
@@ -71,37 +84,40 @@ html, body {
 	.my-box-model-defaults();
 	display: flex;
 	justify-content: flex-end;
+
+	&:hover{
+		background-image:url("./nav-bkg.jpg");
+	}
 }
 
 	 nav a {
 			justify-content: space-between;
 			.my-box-model-defaults();
 			margin: 1em;
-			
 		}
 
 .header-wrapper{
 	.my-box-model-defaults();
-	display:flex;
-	// flex-direction: column;
-	justify-content: space-between;
-	background-color:antiquewhite;
+	.my-flex-defaults();
 }
+
 	figure {
 		width:45%;
 
 			img{
 				border-radius: 1em;
+
 			}
 	}
 	.header-name {
 		width:45%;
 		display:flex;
 		align-items: flex-end;
-		
-		
+			
 		p{
-			font-size: 1.5em;
+			font-size: 1.2em;
+			line-height: 1.2em;
+
 		}
 	}
 .profile-wrapper{
@@ -115,19 +131,36 @@ html, body {
 			line-height: 1.2em;
 		}
 	}
+	h2{
+		background-color: @headerBackGroundColor;
+		font-size: 1.5em;
+	}
+.main-top-wrapper{
+		.my-box-model-defaults();
+		.my-flex-defaults();
+	}
 
-.main-wrapper {
+.main-mid-wrapper {
 	.my-box-model-defaults();
-	display: flex;
-	justify-content: space-between;
-	background-color:red;
-		.main-wrapper-left{
+	
+	.my-flex-defaults();
+
+		.main-mid-wrapper-left{
 			line-height: 1.2em;
 		}
-		.main-wrapper-right{
+		.main-mid-wrapper-right{
 			line-height: 1.2em;
 		}
+}
+.main-image-wrapper{
+	.my-box-model-defaults();
+	.my-flex-defaults();
 }		
+footer{
+	padding:2em;
+	margin:0.5em;
+	text-align: center;
+}
 
 
 
