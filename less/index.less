@@ -55,6 +55,7 @@ table {
 
 html, body {
 	height: 100%;
+	background-color:@headerBackGroundColor;
 	
 
 
@@ -112,7 +113,7 @@ html, body {
 .header-wrapper{
 	.my-box-model-defaults();
 	.my-flex-defaults();
-	background-color:@headerBackGroundColor;
+	
 			img{
 				width:100%;
 				border-radius: 1em;
@@ -158,12 +159,13 @@ html, body {
 .main-top-wrapper{
 		.my-box-model-defaults();
 		.my-flex-defaults();
+
 	}
 
 .main-mid-wrapper {
 	.my-box-model-defaults();
-	
 	.my-flex-defaults();
+	
 
 		.main-mid-wrapper-left{
 			line-height: 1.2em;
@@ -175,6 +177,7 @@ html, body {
 .main-image-wrapper{
 	.my-box-model-defaults();
 	.my-flex-defaults();
+	
 	@media (max-width:500px) {
 		flex-direction: column;
 		justify-content: space-between;
