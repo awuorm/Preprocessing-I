@@ -55,7 +55,7 @@ table {
 
 html, body {
 	height: 100%;
-	background-color: @rootBackGroundColor;
+	
 
 
 	
@@ -63,8 +63,8 @@ html, body {
 }
 /************My code begins here*******************/
 //variables background-color
-@rootBackGroundColor: white;
-@headerBackGroundColor: orangered;
+@headerBackGroundColor: antiquewhite;
+@headerBackGroundImage: url("./nav-bkg.jpg");
 
 //mixins
 .my-box-model-defaults()	{
@@ -77,14 +77,14 @@ html, body {
 	justify-content: space-between;
 }
 
-.ffbasic() {
-    font-family:Arial, sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .body-wrapper	{
 	margin:0 auto;
 	.my-box-model-defaults();
-	.ffbasic(); 
+	 
+}
+ h1, h2,h3,p { 
+	 	font-family: "Gaegu", cursive;
 }
 
 .navigation-wrapper	{
@@ -105,16 +105,19 @@ html, body {
 			justify-content: space-between;
 			.my-box-model-defaults();
 			margin: 1em;
+			text-decoration: none;
 		}
 	}
 
 .header-wrapper{
 	.my-box-model-defaults();
 	.my-flex-defaults();
+	background-color:@headerBackGroundColor;
 			img{
 				width:100%;
 				border-radius: 1em;
-
+				
+			}	
 			}
 	
 	@media(max-width: 500px){
@@ -122,7 +125,7 @@ html, body {
 			flex-shrink:1;
 		}
 	}
-}
+
 	.header-name {
 		display:flex;
 		align-items: flex-end;
@@ -149,7 +152,7 @@ html, body {
 		}
 	}
 	h2{
-		background-color: @headerBackGroundColor;
+		background-image: @headerBackGroundImage;
 		font-size: 1.5em;
 	}
 .main-top-wrapper{
@@ -186,6 +189,7 @@ footer{
 	padding:2em;
 	margin:0.5em;
 	text-align: center;
+	background-image: @headerBackGroundImage;
 	
 }
 .contact-wrapper{
@@ -197,7 +201,7 @@ footer{
 		h3{
 			font-size: 2em;
 			&:hover{
-				background-image: url(./nav-bkg.jpg);
+				background-image: @headerBackGroundImage;
 			}
 		}
 	}
